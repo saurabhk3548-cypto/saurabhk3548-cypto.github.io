@@ -1,4 +1,58 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saurabh Kumar Kittu | Data Analyst Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:#f1f5f9;scroll-behavior:smooth}
+header{text-align:center;padding:100px 20px;background:linear-gradient(135deg,#1e293b,#020617)}
+h1{font-size:48px;margin-bottom:10px}
+.typing{color:#38bdf8}
+.btn{display:inline-block;padding:12px 25px;margin:10px;background:#38bdf8;color:#000;text-decoration:none;border-radius:30px;font-weight:600}
+section{padding:60px 20px;max-width:1000px;margin:auto}
+.card{background:#1e293b;padding:30px;margin-bottom:30px;border-radius:15px;transition:0.3s}
+.card:hover{transform:translateY(-8px)}
+h2{color:#38bdf8}
+.project img{width:100%;border-radius:10px;margin-top:10px}
+.skill-bar{background:#334155;border-radius:20px;overflow:hidden}
+.skill-fill{height:10px;background:#38bdf8}
+.social a{margin:10px;color:#38bdf8;font-size:20px}
+footer{text-align:center;padding:20px;background:#1e293b}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Saurabh Kumar Kittu</h1>
+<p class="typing" id="typing"></p>
+<a href="#projects" class="btn">View Projects</a>
+<a href="resume.pdf" class="btn">Download Resume</a>
+</header>
+
+<section>
+<div class="card">
+<h2>About Me</h2>
+<p>I am a Data Analyst skilled in Python, SQL, Power BI, and Excel. I specialize in turning raw data into actionable insights using visualization and machine learning techniques.</p>
+</div>
+
+<div class="card">
+<h2>Skills</h2>
+<p>Python</p><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+<p>SQL</p><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+<p>Power BI</p><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+<p>Excel</p><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+</div>
+
+<div class="card" id="projects">
+<h2>Projects</h2>
+<div class="project">
+<h3>Sales Dashboard</h3>
+<p>Interactive Power BI dashboard for business insights.</p>
 <img src="project1.png">
 <a href="#" class="btn">View Project</a>
 </div>
@@ -11,23 +65,8 @@
 </div>
 
 <div class="card">
-<h2>Live Dashboard</h2>
-<iframe width="100%" height="400" src="https://app.powerbi.com/view?r=YOUR_EMBED_LINK" frameborder="0" allowFullScreen="true"></iframe>
-</div>
-
-<div class="card">
-<h2>Contact Me</h2>
-<form onsubmit="sendMessage(event)">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="email" id="email" placeholder="Your Email" required>
-<textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-<button class="btn" type="submit">Send Message</button>
-</form>
-<p id="successMsg"></p>
-</div>
-
-<div class="card">
-<h2>Connect</h2>
+<h2>Contact</h2>
+<p>Email: saurabhk3548@gmail.com</p>
 <div class="social">
 <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
 <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
@@ -37,30 +76,20 @@
 </section>
 
 <footer>
-© 2026 Saurabh Kumar | Data Analyst
+© 2026 Saurabh Kumar Kittu | Data Analyst
 </footer>
 
 <script>
-// Typing effect
-const text="Data Analyst | Python | SQL | Power BI | Excel";
+const text="Data Analyst | Python | SQL | Power BI";
 let i=0;
-function type(){if(i<text.length){document.getElementById("typing").innerHTML+=text.charAt(i);i++;setTimeout(type,70)}}
-type();
-
-// Scroll animation
-const cards=document.querySelectorAll('.card');
-window.addEventListener('scroll',()=>{
-cards.forEach(card=>{
-const top=card.getBoundingClientRect().top;
-if(top<window.innerHeight-50){card.classList.add('show');}
-})
-});
-
-// Fake contact form (frontend demo)
-function sendMessage(e){
-e.preventDefault();
-document.getElementById("successMsg").innerText="Message sent successfully!";
+function type(){
+  if(i<text.length){
+    document.getElementById("typing").innerHTML+=text.charAt(i);
+    i++;
+    setTimeout(type,80)
+  }
 }
+type();
 </script>
 
 </body>
